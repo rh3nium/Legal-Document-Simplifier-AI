@@ -12,7 +12,7 @@
 
 Before running the script, ensure you have the following installed:
 
-* **Python 3.6+**: The core language for the script.
+* **Python 3.0+**: The core language for the script.
 * **MongoDB Community Server**: The script connects to a local MongoDB instance running on the default port `27017`. You must have this service running to store documents.
 
 ### Installation & Setup
@@ -51,14 +51,14 @@ Before running the script, ensure you have the following installed:
 
 ---
 
-## 📁 Project Files
+## 📁 Main Python Script
 
 ### `document_simplifier.py`
 
 This is the main Python script. It handles:
 * Connecting to MongoDB.
 * Reading the input document.
-* Extracting key metadata (parties, dates) using regular expressions.
+* Extracting key metadata (parties, dates of issue and termination) using regular expressions.
 * Simplifying the document's content using a pre-trained `t5-base` model.
 * Storing the original and simplified texts in a MongoDB collection.
 
