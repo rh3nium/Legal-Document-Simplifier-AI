@@ -3,3 +3,4 @@ transformers
 pymongo
 flask
 gunicorn
+sentencepiece
