@@ -183,7 +183,7 @@ if __name__ == "__main__":
     print("Loading pre-trained T5 model. This may take a moment...")
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     print(f"Using device: {device}")
-    model_name = 't5-base'
+    model_name = 't5-small'
     tokenizer = T5Tokenizer.from_pretrained(model_name)
     model = T5ForConditionalGeneration.from_pretrained(model_name)
     model.to(device)
