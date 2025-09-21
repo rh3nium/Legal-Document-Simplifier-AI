@@ -20,8 +20,8 @@ Before running the script, ensure you have the following installed:
 1.  **Clone the Repository**: Download the project files to your local machine.
 
     ```bash
-    git clone [https://github.com/your-username/your-repo-name.git](https://github.com/your-username/your-repo-name.git)
-    cd your-repo-name
+    git clone https://github.com/rh3nium/Legal-Document-Simplifier-AI.git
+    cd Legal-Document-Simplifier-AI
     ```
 
 2.  **Create a Virtual Environment**: It is highly recommended to use a virtual environment to manage dependencies and avoid conflicts.
@@ -46,7 +46,7 @@ Before running the script, ensure you have the following installed:
 4.  **Run the Script**: Execute the script by providing the path to a legal document file as a command-line argument. The repository includes a `legal_document.txt` for testing.
 
     ```bash
-    python document_simplifier.py legal_document.txt
+    python3 script.py
     ```
 
 ---
