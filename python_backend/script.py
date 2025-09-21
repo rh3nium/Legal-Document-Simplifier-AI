@@ -1,24 +1,27 @@
+import os
 import torch
 from transformers import T5ForConditionalGeneration, T5Tokenizer
 from pymongo import MongoClient
 import datetime
 import re
 
-# Function to connect to the MongoDB database
+# Function to connect to the MongoDB database using an environment variable
 def get_database():
     """
-    Connects to a MongoDB database.
+    Connects to a MongoDB database using a URI from an environment variable.
     
     Returns:
         pymongo.database.Database: The database object.
     """
-    # REPLACE WITH YOUR MongoDB connection string
-    CONNECTION_STRING = "mongodb://localhost:27017/" 
+    # Use environment variable for the connection string
+    CONNECTION_STRING = os.environ.get('MONGODB_URI')
     
+    if not CONNECTION_STRING:
+        print("Error: MONGODB_URI environment variable not set.")
+        return None
+
     try:
-        # Create a connection using MongoClient
         client = MongoClient(CONNECTION_STRING)
-        # 'legal_docs' - database name
         return client['legal_docs']
     except Exception as e:
         print(f"Error connecting to MongoDB: {e}")
@@ -142,7 +145,7 @@ def simplify_document(document_text, tokenizer, model):
     return final_output
 
 
-# Function to store data (priginal & simplified documents) in MongoDB
+# Function to store data (original & simplified documents) in MongoDB
 def store_in_mongodb(db, original_text, simplified_text):
     """
     Args:
@@ -170,12 +173,14 @@ def store_in_mongodb(db, original_text, simplified_text):
         print(f"Error storing document in MongoDB: {e}")
 
 
-##### Main execution block #####
-
+# This block is for local testing only and will not run on Render
 if __name__ == "__main__":
+    # The code below is now for local testing and will not be executed when the module is imported
+    # It still uses the local file and a local MongoDB connection for your local development.
+    print("This script is now configured as a reusable module. For local testing, ensure 'MONGODB_URI' is set in your environment.")
+
     # Step 1: Load the pre-trained model and tokenizer
     print("Loading pre-trained T5 model. This may take a moment...")
-    # Check for GPU and set device
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     print(f"Using device: {device}")
     model_name = 't5-base'
@@ -185,6 +190,8 @@ if __name__ == "__main__":
     print("Model loaded successfully.")
     
     # Step 2: Get MongoDB database connection
+    # Note: For local testing, you might need to manually set the environment variable
+    # os.environ['MONGODB_URI'] = "mongodb://localhost:27017/"
     db = get_database()
     if db is not None:
         print("Connected to MongoDB.")
@@ -206,7 +213,6 @@ if __name__ == "__main__":
         print("-" * 70)
         print(simplified_doc)
 
-        # Store the data in MongoDB if the connection is successful
         store_in_mongodb(db, sample_document, simplified_doc)
     else:
         print("Could not simplify document. Please check the input text.")
