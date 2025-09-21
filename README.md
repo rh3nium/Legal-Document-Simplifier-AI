@@ -6,7 +6,7 @@
 
 ---
 
-## 🚀 Getting Started
+## 🚀 Instructions to Run the Script
 
 ### Prerequisites
 
