@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 # Load the T5 model and tokenizer once when the app starts
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-model_name = 't5-base'
+model_name = 't5-small'
 tokenizer = T5Tokenizer.from_pretrained(model_name)
 model = T5ForConditionalGeneration.from_pretrained(model_name)
 model.to(device)
