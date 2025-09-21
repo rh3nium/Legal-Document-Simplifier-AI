@@ -142,7 +142,7 @@ def simplify_document(document_text, tokenizer, model):
     return final_output
 
 
-# Function to store data (priginal & simplified documents) in MongoDB
+# Function to store data (original & simplified documents) in MongoDB database
 def store_in_mongodb(db, original_text, simplified_text):
     """
     Args:
