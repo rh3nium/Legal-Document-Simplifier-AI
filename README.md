@@ -281,4 +281,3 @@ if __name__ == "__main__":
         store_in_mongodb(db, sample_document, simplified_doc)
     else:
         print("Could not simplify document. Please check the input file path and its content.")
----
