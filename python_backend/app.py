@@ -1,5 +1,5 @@
 from flask import Flask, request, jsonify
-from document_simplifier import simplify_document, get_database, store_in_mongodb
+from script import simplify_document, get_database, store_in_mongodb
 import os
 import torch
 from transformers import T5ForConditionalGeneration, T5Tokenizer
