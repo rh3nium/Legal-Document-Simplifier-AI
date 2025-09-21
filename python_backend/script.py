@@ -12,6 +12,7 @@ def get_database():
     Returns:
         pymongo.database.Database: The database object.
     """
+    # REPLACE WITH YOUR MongoDB connection string
     CONNECTION_STRING = "mongodb://localhost:27017/" 
     
     try:
@@ -141,7 +142,7 @@ def simplify_document(document_text, tokenizer, model):
     return final_output
 
 
-# Function to store data (original & simplified documents) in MongoDB database
+# Function to store data (priginal & simplified documents) in MongoDB
 def store_in_mongodb(db, original_text, simplified_text):
     """
     Args:
