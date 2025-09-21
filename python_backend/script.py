@@ -12,7 +12,6 @@ def get_database():
     Returns:
         pymongo.database.Database: The database object.
     """
-    # REPLACE WITH YOUR MongoDB connection string
     CONNECTION_STRING = "mongodb://localhost:27017/" 
     
     try:
