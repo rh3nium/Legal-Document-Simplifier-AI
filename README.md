@@ -1,4 +1,4 @@
-# Legal Document Simplifier AI Tool
+# Legal Document Simplifier AI Tool 🪄🧾
 
 <img src="LegalAI (1).png">
 
