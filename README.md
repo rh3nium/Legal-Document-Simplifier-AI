@@ -1,7 +1,9 @@
 # Legal Document Simplifier AI Tool 🪄🧾
 
-<img src="LegalAI (1).png">
-### Output - Simplified Document
+### 🧾 Landing page
+<img src="homepage.png">
+
+### 🪄 Output - Simplified Document
 <img src="output1.png">
 <img src="output2.png">
 
