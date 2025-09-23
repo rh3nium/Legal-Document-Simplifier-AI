@@ -1,6 +1,7 @@
-# Legal Document Simplifier AI Tool 🪄🧾
+<img width="1689" height="903" alt="image" src="https://github.com/user-attachments/assets/581c5c2e-d076-4d39-8fed-ba51b05fac87" /># Legal Document Simplifier AI Tool 🪄🧾
 
 <img src="LegalAI (1).png">
+<img src="output.png">
 
 **A Python script that uses a T5 transformer model to simplify complex legal documents, and store the original and simplified texts in a MongoDB database. This tool is designed to make legal jargon more accessible and provide a clear, concise summary of key document details.**
 
