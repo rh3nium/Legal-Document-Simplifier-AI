@@ -8,6 +8,10 @@
 ### Output - Simplified Document 🪄
 <img src="https://github.com/user-attachments/assets/50a55b20-1ec0-4ed6-ac8e-86a6909c5596" style="width: 90%;">
 
+### Output - Asking Questions about the Document
+<img src="https://github.com/user-attachments/assets/e76d8ae4-aeac-42f2-bb23-aa6d01035d3a" style="width: 90%;" >
+
+
 ---
 
 ## 🚀 Instructions to Run the Script
