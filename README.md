@@ -1,7 +1,8 @@
 # Legal Document Simplifier AI Tool 🪄🧾
 
 **A Python script that uses a T5 transformer model to simplify complex legal documents, and store the original and simplified texts in a MongoDB database. This tool is designed to make legal jargon more accessible and provide a clear, concise summary of key document details.**<br>
-**It has also been deployed on HuggingFace.**
+
+**It has also been deployed on HuggingFace as a web application.**
 
 ### Landing page 🧾
 <img src="homepage.png" style="width: 90%;">
