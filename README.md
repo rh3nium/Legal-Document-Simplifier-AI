@@ -14,7 +14,7 @@
 
 ---
 
-## 🚀 Instructions to Run the Script
+## 🚀 Instructions to Run the Script Locally
 
 ### Prerequisites
 
